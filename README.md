@@ -84,7 +84,7 @@ $ pip install hyper
 1. Now we want to setup our translation service and app. Let’s start by copying over the contents of the example
     from this package to the ‘..\QlikSenseAAI\Translate\’ location. Alternatively you can simply clone the repository.
 2. After copying over the contents, go ahead and import the example qvf found [here](https://www.dropbox.com/s/9fha0xqm9c3bnuv/DPI%20-%20Python%20Translation.qvf?dl=0).
-3. Lastly, import the qsvariable extension zip file found here using the QMC.
+3. Lastly, import the qsvariable extension zip file found [here](https://github.com/erikwett/qsVariable) using the QMC.
 
 
 ## PREPARE AND START SERVICES
