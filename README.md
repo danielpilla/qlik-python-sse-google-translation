@@ -21,7 +21,7 @@
 ## PREPARE YOUR PROJECT DIRECTORY
 >### <span style="color:red">ALERT</span>
 ><span style="color:red">
->**_Virtual environments are not necessary, but are frequently considered a best practice when handling multiple Python projects._**
+>Virtual environments are not necessary, but are frequently considered a best practice when handling multiple Python projects.
 ></span>
 
 1. Open a command prompt
@@ -34,7 +34,7 @@ $ workon QlikSenseAAI
 ```
 
 4. Now, ensuring you are in the ‘QlikSenseAAI’ folder that you created (if you have followed another guide, it might redirect you to a prior working directory if you've set a default, execute the following commands to create and navigate into your project’s folder structure:
-```shell
+```
 $ cd QlikSenseAAI
 $ mkdir Translate
 $ cd Translate
