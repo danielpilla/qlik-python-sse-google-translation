@@ -34,7 +34,6 @@
 
 1. Open a command prompt
 2. Make a new project folder called QlikSenseAAI, where all of our projects will live that leverage the QlikSenseAAI virtual environment that we’ve created. Let’s place it under ‘C:\Users\{Your Username}’. If you have already created this folder in another guide, simply skip this step.
-3.
 3. We now want to leverage our virtual environment. If you are not already in your environment, enter it by executing:
 
 ```shell
@@ -53,7 +52,7 @@ $ cd Translate
 ```shell
 $ setprojectdir .
 ```
-6. We have now set the stage for our Sentiment environment. To navigate back into this project in the future, simply execute:
+6. We have now set the stage for our environment. To navigate back into this project in the future, simply execute:
 ```shell
 $ workon QlikSenseAAI
 ```
@@ -125,7 +124,10 @@ $ python __main__.py
        
        text, a numeric id, source language, destination language
 
-See the below example of how to utilize the *TranslateScript()* function in the load script:
+See the below example of how to utilize the *TranslateScript()* function in the load script.
+
+
+*Note that if you are using QlikView and cannot use the TranslateScript() function, you can still use the Translate() function in the script just like any other native function--just be aware that this will operate as a scalar function and will be called record-by-record vs a single time. This will have a large performance impact but will still work.
 
 ```
 Data:
