@@ -1,4 +1,11 @@
 # Python Google Translation Service SSE for Qlik Sense
+*The Translate() function may be used with QlikView as of November 2017+
+
+[!Sheet 1](qlik-python-sse-google-translation/translation-sheet-1.png)
+
+[!Sheet 2](qlik-python-sse-google-translation/translation-sheet-2.png)
+
+[!Sheet 3](qlik-python-sse-google-translation/translation-sheet-3.png)
 
 ## REQUIREMENTS
 
