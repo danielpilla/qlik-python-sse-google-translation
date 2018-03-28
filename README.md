@@ -1,5 +1,6 @@
 # Python Google Translation Service SSE for Qlik Sense
-*The Translate() function may be used with QlikView as of November 2017+*
+* *The Translate() function may be used with QlikView as of November 2017+*
+*See how to setup Analytic Connections within QlikView [here](https://help.qlik.com/en-US/qlikview/November2017/Subsystems/Client/Content/Analytic_connections.htm)*
 
 ![Sheet 1](https://s3.amazonaws.com/dpi-sse/qlik-python-sse-google-translation/translation-sheet-1.png)
 
