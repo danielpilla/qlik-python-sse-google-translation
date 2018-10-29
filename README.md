@@ -69,12 +69,16 @@ the working directory with ‘setprojectdir .’
 ```shell
 $ workon QlikSenseAAI
 ```
-2. Execute the following commands. If you have followed a previous guide, you have more than likely already installed grpcio):
+2. Execute the following commands. If you have followed a previous guide, you have more than likely already installed grpcio).
+
+*Note that we cannot use the googletrans library in the interim as Google has changed the way they send tokens, which has broken the repo. Updated install below* _10.29.18_.
 
 ```shell
 $ pip install grpcio
 $ python -m pip install grpcio-tools
-$ pip install googletrans
+$ git clone https://github.com/BoseCorp/py-googletrans.git
+$ cd ./py-googletrans
+$ python setup.py install
 $ pip install hyper
 ```
 
