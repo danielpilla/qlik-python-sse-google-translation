@@ -19,7 +19,7 @@ import grpc
 from ssedata import FunctionType
 from scripteval import ScriptEval
 
-##IMPORT SENTIMENT ANALYZER
+##IMPORT GOOGLETRANS
 from googletrans import Translator
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
