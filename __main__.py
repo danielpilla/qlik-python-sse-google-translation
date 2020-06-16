@@ -21,7 +21,6 @@ from scripteval import ScriptEval
 
 ##IMPORT SENTIMENT ANALYZER
 from googletrans import Translator
-translator = Translator()
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
@@ -79,7 +78,6 @@ class ExtensionService(SSE.ConnectorServicer):
 
     @staticmethod
     def _translate(request, context):
-        global translator
         translationsList = []
        
         # Iterate over bundled rows
@@ -97,12 +95,11 @@ class ExtensionService(SSE.ConnectorServicer):
 
                 translationsList.append(text)
 
-        for i in range(3):
-            try:
-                translations = translator.translate(translationsList,src=src,dest=dest)
-                break
-            except:
-                pass
+        try:
+            translator = Translator()
+            translations = translator.translate(translationsList,src=src,dest=dest)
+        except:
+            pass
 
         resultList = [i.text for i in translations]
         logging.info('Records translated: '  + str(len(resultList)))
@@ -115,7 +112,6 @@ class ExtensionService(SSE.ConnectorServicer):
 
     @staticmethod
     def _translateScript(request, context):
-        global translator
 
         idNumList = []
         translationsList = []
@@ -139,12 +135,11 @@ class ExtensionService(SSE.ConnectorServicer):
 
                 translationsList.append(text)
 
-        for i in range(3):
-            try:
-                translations = translator.translate(translationsList,src=src,dest=dest)
-                break
-            except:
-                pass
+        try:
+            translator = Translator()
+            translations = translator.translate(translationsList,src=src,dest=dest)
+        except:
+            pass
 
         resultList = [i.text for i in translations]
         logging.info('Records translated: '  + str(len(resultList)))
@@ -188,7 +183,7 @@ class ExtensionService(SSE.ConnectorServicer):
         # Enable(or disable) script evaluation
         # Set values for pluginIdentifier and pluginVersion
         capabilities = SSE.Capabilities(allowScript=True,
-                                        pluginIdentifier='Sentiment',
+                                        pluginIdentifier='Translation',
                                         pluginVersion='v1.1.0')
 
         # If user defined functions supported, add the definitions to the message
